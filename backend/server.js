@@ -31,7 +31,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Create (POST)
-app.post('/api/create', (req, res) => {
+app.post('/create', (req, res) => {
   const sql = 'INSERT INTO receipts SET ?';
   const data = req.body;
   
