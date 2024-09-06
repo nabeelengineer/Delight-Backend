@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-  host: 'https://delight-backend-suuw.onrender.com',
+  host: 'delight-backend-suuw.onrender.com',
   port: 3306,
   user: 'root',
   password: '', // Your MySQL root password
