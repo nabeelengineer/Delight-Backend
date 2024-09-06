@@ -7,7 +7,8 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-  host: 'localhost',
+  host: 'https://delight-backend-suuw.onrender.com',
+  port: 3306,
   user: 'root',
   password: '', // Your MySQL root password
   database: 'receipt_db', // Database name
@@ -29,7 +30,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Create (POST)
-app.post('/create', (req, res) => {
+app.post('/api/create', (req, res) => {
   const sql = 'INSERT INTO receipts SET ?';
   const data = req.body;
   
