@@ -12,6 +12,7 @@ const db = mysql.createConnection({
   user: 'root',
   password: '', // Your MySQL root password
   database: 'receipt_db', // Database name
+  connectTimeout: 100000,
 });
 
 db.connect((err) => {
