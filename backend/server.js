@@ -21,6 +21,13 @@ db.connect((err) => {
   console.log('Connected to MySQL database');
 });
 
+// Allow requests from your frontend domain
+const corsOptions = {
+  origin: 'https://delight-frontend.onrender.com'
+};
+
+app.use(cors(corsOptions));
+
 // Create (POST)
 app.post('/create', (req, res) => {
   const sql = 'INSERT INTO receipts SET ?';
